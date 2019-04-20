@@ -11,7 +11,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    
     private NoteViewMoel noteViewMoel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

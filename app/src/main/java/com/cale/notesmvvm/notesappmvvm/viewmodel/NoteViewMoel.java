@@ -1,14 +1,17 @@
-package com.cale.notesmvvm.notesappmvvm;
+package com.cale.notesmvvm.notesappmvvm.viewmodel;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.support.annotation.NonNull;
 
+import com.cale.notesmvvm.notesappmvvm.service.model.Note;
+import com.cale.notesmvvm.notesappmvvm.service.repository.NoteRepository;
+
 import java.util.List;
 
 public class NoteViewMoel extends AndroidViewModel {
-    private  NoteRepository repository;
+    private NoteRepository repository;
     private LiveData<List<Note>> allNotes;
 
     public NoteViewMoel(@NonNull Application application) {

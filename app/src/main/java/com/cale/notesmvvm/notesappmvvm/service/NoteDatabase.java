@@ -1,4 +1,4 @@
-package com.cale.notesmvvm.notesappmvvm;
+package com.cale.notesmvvm.notesappmvvm.service;
 
 import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.Database;
@@ -7,6 +7,8 @@ import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
+
+import com.cale.notesmvvm.notesappmvvm.service.model.Note;
 
 @Database(entities = {Note.class},version = 1,exportSchema = false)
 public abstract class NoteDatabase extends RoomDatabase {

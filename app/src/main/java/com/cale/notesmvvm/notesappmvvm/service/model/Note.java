@@ -1,4 +1,4 @@
-package com.cale.notesmvvm.notesappmvvm;
+package com.cale.notesmvvm.notesappmvvm.service.model;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;

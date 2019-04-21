@@ -1,8 +1,12 @@
-package com.cale.notesmvvm.notesappmvvm;
+package com.cale.notesmvvm.notesappmvvm.service.repository;
 
 import android.app.Application;
 import android.arch.lifecycle.LiveData;
 import android.os.AsyncTask;
+
+import com.cale.notesmvvm.notesappmvvm.service.NoteDao;
+import com.cale.notesmvvm.notesappmvvm.service.NoteDatabase;
+import com.cale.notesmvvm.notesappmvvm.service.model.Note;
 
 import java.util.List;
 

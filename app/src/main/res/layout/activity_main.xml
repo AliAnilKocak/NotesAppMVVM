@@ -14,4 +14,16 @@
 
         />
 
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btn_add_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="#43B05C"
+
+        app:rippleColor="#166e2a" />
 </android.support.design.widget.CoordinatorLayout>

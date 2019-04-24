@@ -12,7 +12,12 @@ import android.widget.Toast;
 
 import com.cale.notesmvvm.notesappmvvm.R;
 
-public class AddNoteActivity extends AppCompatActivity {
+import static android.app.Activity.RESULT_OK;
+
+public class AddEditNoteActivity extends AppCompatActivity {
+
+    public static final String EXTRA_ID =
+            "com.cale.notesmvvm.notesappmvvm.EXTRA_ID";
 
     public static final String EXTRA_TITLE =
             "com.cale.notesmvvm.notesappmvvm.EXTRA_TITLE";
@@ -38,7 +43,19 @@ public class AddNoteActivity extends AppCompatActivity {
         np_priority.setMinValue(1);
         np_priority.setMaxValue(10);
 
-        setTitle("Add Note");
+
+        Intent intent = getIntent();
+
+        if (intent.hasExtra(EXTRA_ID)) {
+            setTitle("Edit Note");
+            txtTitle.setText(intent.getStringExtra(EXTRA_TITLE));
+            txtDescription.setText(intent.getStringExtra(EXTRA_DESCRIPTION));
+            np_priority.setValue(intent.getIntExtra(EXTRA_PRIORITY,1));
+
+        } else {
+            setTitle("Add Note");
+        }
+
     }
 
 
@@ -76,6 +93,11 @@ public class AddNoteActivity extends AppCompatActivity {
         data.putExtra(EXTRA_TITLE, title);
         data.putExtra(EXTRA_DESCRIPTION, description);
         data.putExtra(EXTRA_PRIORITY, priority);
+
+        int id = getIntent().getIntExtra(EXTRA_ID,-1);
+        if(id != -1){
+            data.putExtra(EXTRA_ID,id);
+        }
 
         setResult(RESULT_OK, data);
         finish();

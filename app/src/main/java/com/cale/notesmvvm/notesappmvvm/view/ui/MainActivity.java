@@ -91,8 +91,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onChanged(@Nullable List<Note> notes) {
 
-                noteAdapter.setNotes(notes);
-
+                noteAdapter.submitList(notes);
                 Toast.makeText(MainActivity.this, "onChanged", Toast.LENGTH_SHORT).show();
             }
         });
